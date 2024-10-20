@@ -4,7 +4,7 @@ const countries = [
     { name: 'UK', sections: ['Events', 'Research Papers', 'Historical Work'] }
 ];
 
-// Fake data for each country and section
+
 const fakeData = {
     'India': {
         'Events': [
@@ -49,7 +49,7 @@ const fakeData = {
     }
 };
 
-// Get the container and content display elements
+
 const container = document.getElementById('dropdowns-container');
 const contentDisplay = document.getElementById('content-display');
 const searchBar = document.getElementById('search-bar');
@@ -57,7 +57,7 @@ const modal = document.getElementById('myModal');
 const modalText = document.getElementById('modal-text');
 const closeModal = document.getElementsByClassName('close')[0];
 
-// Generate dropdown menus for countries and their sections
+
 countries.forEach(country => {
     const dropdown = document.createElement('div');
     dropdown.className = 'dropdown';
@@ -77,11 +77,11 @@ countries.forEach(country => {
         link.addEventListener('click', function(event) {
             event.preventDefault();
 
-            // Display the relevant data when clicked
+           
             const selectedCountry = country.name;
             const selectedSection = section;
 
-            // Get fake data for the selected section of the country
+            
             const dataToDisplay = fakeData[selectedCountry][selectedSection];
             
             if (dataToDisplay && dataToDisplay.length > 0) {
@@ -115,7 +115,7 @@ searchBar.addEventListener('input', function () {
     });
 });
 
-// Modal for displaying additional information
+
 closeModal.onclick = function() {
     modal.style.display = 'none';
 };
