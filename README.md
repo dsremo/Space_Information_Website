@@ -4,8 +4,9 @@ Welcome to the **Country Events and Research Platform**, a dynamic web applicati
 
 ## Live Website
 
-You can access the live website at the following link:
-- [Country Events and Research Platform](https://dsremo.github.io/Space_Information_Website/)
+You can access the live website at the following links:
+- [Country Events and Research Platform (Version 1)](https://rawcdn.githack.com/dsremo/Space_Information_Website/ed76ff1e4c028538baa64b338602350680f47d69/frontend/public/index.html)
+- [Country Events and Research Platform (Version 2)](https://raw.githack.com/dsremo/Space_Information_Website/main/frontend/public/index.html)
 
 ## Features
 
