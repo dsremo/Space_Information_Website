@@ -3,38 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Events and Research Platform</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <title>Country Events and Research Platform</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+
 </head>
 <body>
-    <h1>Country Events and Research Platform</h1>
 
-   
-    <div id="upper-right">
-        <input type="text" id="search-bar" placeholder="Search events or research papers..." />
-        <button id="dark-mode-toggle">Dark Mode</button>
-    </div>
-
-    <div id="dropdowns-container"></div>
-
-   
-<div class="gallery">
-    <img src="images/space_image_1.jpg" alt="Space Image 1" />
-    <img src="images/space_image_2.jpg" alt="Space Image 2" />
-</div>
-
-
-    
-    <div id="content-display" class="content-display"></div>
-
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <p id="modal-text"></p>
+    <!-- Header -->
+    <header>
+        <h1 class="animate__animated animate__fadeInDown">Space Events and Research Platform</h1>
+        <!-- Search Bar and Dark Mode -->
+        <div id="header-controls">
+            <input type="text" id="search-bar" placeholder="Search content..." />
+            <button id="dark-mode-toggle">Dark Mode</button>
         </div>
-    </div>
+    </header>
 
-    <script src="script.js"></script>
-</body>
-</html>
+    <!-- NASA APOD Section -->
+    <section id="nasa-section" class="animate__animated animate__fadeInUp">
+        <h2>NASA Image/Video of the Day</h2>
+        <div id="media-container">
+            <p>Loading...</p>
+        </div>
+    </section>
+
+    <!-- Google Search Section -->
+    <section id="search-section">
+        <h2>Search for Space Events and Research</h2>
+        <script async src="https://cse.google.com/cse.js?cx=805570c3835914621"></script>
+        <div class="gcse-search"></div>
+    </section>
+
+    <!-- Navigation for ISRO Content -->
+    <section id="country-section">
+        <div id="countries-container">
+            <div id="india-section">
+                <h2>India - ISRO</h2>
+                <a href="/india/data/press_releases" id="events-link">Events</a>
+                <a href="/india/data/patents" id="patents-link">Patents</a>
+                <a href="/india/data/history" id="history-link">Historical Work</a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Dynamic Content Display Section -->
+    <section id="content-display" class="animate__animated animate__fadeInUp">
+        <!-- Content will be dynamically inserted here -->
+        <div id="press-releases-list"></div>
+        <table id="patents-table"></table>
+        <div id="history"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Space Explorer</p>
+    </footer>
